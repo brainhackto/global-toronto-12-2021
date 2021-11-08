@@ -52,29 +52,28 @@
 }
 
 .subcomittee-container {
-           display: -webkit-flex;
-           display: flex;
-           -webkit-flex-direction: row;
-           flex-direction: row;
-           -webkit-align-items: center;
-           align-items: center;
-           flex-wrap: wrap;
-           min-width: 300px;
-           max-width: 1200px;
-	   	 		 justify-content: space-even;
-           background: rgb(255,255,255);
-        }
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-width: 300px;
+	max-width: 1200px;
+	justify-content: space-even;
+	background: rgb(255,255,255);
+}
 
-        .flex-item {
-        display:flex;
-        align-items: center;		
-		flex-basis: 33.333333%;
-        width: 300px;
-				line-height: 25px;
-        margin: 10px;
-        padding: 1px;
-        overflow: hidden;
-        }
+.flex-item {
+	display:flex;
+	align-items: center;		
+	flex-basis: 30%;
+	line-height: 25px;
+	margin: 14px;
+	padding: 5px;
+	overflow: hidden;
+}
 
 .flex-item img{
     flex-grow:0;
