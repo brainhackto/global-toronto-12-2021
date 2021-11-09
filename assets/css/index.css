@@ -99,14 +99,14 @@
 	width: auto;
 }
 
-.industry-box {
-	flex-basis: 20%;
+.worklife-box {
+	flex-basis: 30%;
 	flex-grow: 0;
 
 }
 
-.science-box {
-	flex-basis: 20%;
+.career-box {
+	flex-basis: 30%;
 	flex-grow: 0;
 
 }
