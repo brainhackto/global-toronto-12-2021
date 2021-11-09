@@ -150,41 +150,41 @@
 	margin-bottom: 30vh;
 }
 
-#science-person {
+#worklife-person {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
 	font-weight: bold;
 }
 
-#science-job {
+#worklife-job {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
 	font-style: italic;
 }
 
-#science-bio {
+#worklife-bio {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
 }
 
-#industry-person {
+#career-person {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
 	font-weight: bold;
 }
 
-#industry-job {
+#career-job {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
 	font-style: italic;
 }
 
-#industry-bio {
+#career-bio {
 	transition: 1s color;
 	color: #000000;
 	font-size: x-large;
