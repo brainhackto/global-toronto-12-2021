@@ -29,7 +29,6 @@
 
 .logo-text{
 	align-self:center;
-
 }
 
 .panelists {
@@ -43,12 +42,10 @@
 }
 
 .panelist-box{
-
 	width: 90%;
 	height: 40vh;
 	object-fit: cover;
 	object-position: center;
-
 }
 
 .subcomittee-container {
@@ -102,14 +99,13 @@
 .worklife-box {
 	flex-basis: 30%;
 	flex-grow: 0;
-
 }
 
 .career-box {
 	flex-basis: 30%;
 	flex-grow: 0;
-
 }
+
 #register-link {
 	font-family: 'Montserrat';
 	font-weight: 1000;

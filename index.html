@@ -223,7 +223,11 @@
 				<div class="row">
 					<h3><a id="panel_worklife"></a> <b>Day 2: Mental Health and Work-life Balance</b>
 				</div>
+				<div class="row" style="padding: 0 0 2em 0">
+					<h4>Panelists</h4>
+				</div>
 				<p>	</p>
+
 				<!-- Add flexbox div container horizontal here use placeholder-->
 				<div class="panelists">
 
@@ -242,7 +246,11 @@
 				<div class="row">
 					<h3><a id="panel_career"></a> <b>Day 3: Career Development</b>
 				</div>
+				<div class="row" style="padding: 0 0 2em 0">
+					<h4>Panelists</h4>
+				</div>
 				<p>	</p>
+				
 				<!-- Add flexbox div container horizontal here use placeholder-->
 				<div class="panelists">
 
@@ -638,12 +646,12 @@
 	<script src="assets/js/main.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<!-- Script for writing into divs science-text -->
+	<!-- Script for writing into divs worklife-text -->
 	<script>
 		// Get relevant elements
-		var science_boxes = Array.from(document.getElementsByClassName("science-box"))
+		var worklife_boxes = Array.from(document.getElementsByClassName("worklife-box"))
 		// This function will write into a div
-		function displayScience(evt) {
+		function displayWorklife(evt) {
 			var person = evt.currentTarget.person;
 			var job = evt.currentTarget.job;
 			var bio = evt.currentTarget.bio;
@@ -652,57 +660,57 @@
 			console.log(job);
 			console.log(bio);
 			// Fill in
-			$("#science-person").fadeOut(function (evt) {
+			$("#worklife-person").fadeOut(function (evt) {
 				$(this).text(person).fadeIn();
 			});
-			$("#science-job").fadeOut(function (evt) {
+			$("#worklife-job").fadeOut(function (evt) {
 				$(this).text(job).fadeIn();
 			});
-			$("#science-bio").fadeOut(function (evt) {
+			$("#worklife-bio").fadeOut(function (evt) {
 				$(this).text(bio).fadeIn();
 			});
 		}
 		// Read JSON object
-		$.getJSON("assets/data/science.json", function (data) {
-			// For each science-box assign an event listener
-			science_boxes.map((obj, ind) => {
+		$.getJSON("assets/data/worklife.json", function (data) {
+			// For each worklife-box assign an event listener
+			worklife_boxes.map((obj, ind) => {
 				console.log(obj)
 				console.log(ind)
 				obj.person = data[ind].person
 				obj.job = data[ind].job
 				obj.bio = data[ind].bio
-				obj.addEventListener("mouseover", displayScience)
+				obj.addEventListener("mouseover", displayWorklife)
 			});
 		});
 	</script>
 
-	<!-- Script for writing into divs industry-text -->
+	<!-- Script for writing into divs career-text -->
 	<script>
 		// Get relevant elements
-		var industry_boxes = Array.from(document.getElementsByClassName("industry-box"))
+		var career_boxes = Array.from(document.getElementsByClassName("career-box"))
 		// This function will write into a div
-		function displayIndustry(evt) {
+		function displayCareer(evt) {
 			var person = evt.currentTarget.person;
 			var job = evt.currentTarget.job;
 			var bio = evt.currentTarget.bio;
-			$("#industry-person").fadeOut(function (evt) {
+			$("#career-person").fadeOut(function (evt) {
 				$(this).text(person).fadeIn();
 			});
-			$("#industry-job").fadeOut(function (evt) {
+			$("#career-job").fadeOut(function (evt) {
 				$(this).text(job).fadeIn();
 			});
-			$("#industry-bio").fadeOut(function (evt) {
+			$("#career-bio").fadeOut(function (evt) {
 				$(this).text(bio).fadeIn();
 			});
 		}
 		// Read JSON object
-		$.getJSON("assets/data/industry.json", function (data) {
-			// For each science-box assign an event listener
-			industry_boxes.map((obj, ind) => {
+		$.getJSON("assets/data/career.json", function (data) {
+			// For each career-box assign an event listener
+			career_boxes.map((obj, ind) => {
 				obj.person = data[ind].person
 				obj.job = data[ind].job
 				obj.bio = data[ind].bio
-				obj.addEventListener("mouseover", displayIndustry)
+				obj.addEventListener("mouseover", displayCareer)
 			});
 		});
 	</script>
