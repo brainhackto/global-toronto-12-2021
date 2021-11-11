@@ -98,6 +98,7 @@
 
 .worklife-box {
 	flex-basis: 30%;
+	align-items: left;
 	flex-grow: 0;
 }
 
