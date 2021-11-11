@@ -31,6 +31,25 @@
 	align-self:center;
 }
 
+.topnav {
+	overflow: hidden;
+	background-color: rgb(250, 250, 250);
+  }
+  
+  .topnav a {
+	float: left;
+	color: #113c75;
+	text-align: center;
+	padding: 5px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: rgb(16, 86, 151);
+	color: rgb(173, 228, 241);
+  }
+
 .panelists {
 	background: rgb(255,255,255);
 	height: 100%;
@@ -132,6 +151,8 @@
 
 #reg-link {
 	margin-bottom: 1.5em;
+	justify-content: center;
+	align-items: center;
 }
 
 
