@@ -185,7 +185,7 @@
 #worklife-bio {
 	transition: 1s color;
 	color: #000000;
-	font-size: x-large;
+	font-size: large;
 }
 
 #career-person {
@@ -205,5 +205,5 @@
 #career-bio {
 	transition: 1s color;
 	color: #000000;
-	font-size: x-large;
+	font-size: large;
 }
