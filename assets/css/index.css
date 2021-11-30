@@ -228,3 +228,23 @@
 	color: #000000;
 	font-size: large;
 }
+
+#era-person {
+	transition: 1s color;
+	color: #000000;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+#era-job {
+	transition: 1s color;
+	color: #000000;
+	font-size: x-large;
+	font-style: italic;
+}
+
+#era-bio {
+	transition: 1s color;
+	color: #000000;
+	font-size: large;
+}

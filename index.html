@@ -296,6 +296,31 @@
 					BrainHack Global Toronto 2021 will feature two unconference talks:
 
 				</p>
+
+				<div class="row" style="padding: 0 0 0 0">
+					<h3><a id="talk_era"></a> <b>A new era of clinical cohort studies at CAMH and beyond: design, purpose, and opportunities for data integration</b></h3>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="4u 12u(narrow)">
+							<div class="era-box"><img class="panelist-box" src="./images/panelists/dan.jfif"
+									alt="panelist-box"></div>
+						</div>
+						<div class="8u 12u(narrow)">
+							<ul class="info">
+								<li>Join us for a unique session, where Dr. Norman Farb will share some mindfulness neuroimaging
+									findings then guide a mindfulness meditation.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Goal on hover of above, call a JS script that writes into panelist-test-->
+				<div class="text-parent">
+					<div id="era-person"></div>
+					<div id="era-job"></div>
+					<div id="era-bio"></div>
+				</div>
 				
 				<div class="row" style="padding: 0 0 0 0">
 					<h3><a id="talk_worklife"></a> <b>Mindfulness - from research to practice </b></h3>
@@ -739,6 +764,44 @@
 		$.getJSON("assets/data/worklife.json", function (data) {
 			// For each worklife-box assign an event listener
 			worklife_boxes.map((obj, ind) => {
+				console.log(obj)
+				console.log(ind)
+				obj.person = data[ind].person
+				obj.job = data[ind].job
+				obj.bio = data[ind].bio
+				obj.addEventListener("mouseover", displayWorklife)
+			});
+		});
+	</script>
+
+	<!-- Script for writing into divs worklife-text -->
+	<script>
+		// Get relevant elements
+		var era_boxes = Array.from(document.getElementsByClassName("era-box"))
+		// This function will write into a div
+		function displayEra(evt) {
+			var person = evt.currentTarget.person;
+			var job = evt.currentTarget.job;
+			var bio = evt.currentTarget.bio;
+			console.log(evt.currentTarget);
+			console.log(person);
+			console.log(job);
+			console.log(bio);
+			// Fill in
+			$("#era-person").fadeOut(function (evt) {
+				$(this).text(person).fadeIn();
+			});
+			$("#era-job").fadeOut(function (evt) {
+				$(this).text(job).fadeIn();
+			});
+			$("#era-bio").fadeOut(function (evt) {
+				$(this).text(bio).fadeIn();
+			});
+		}
+		// Read JSON object
+		$.getJSON("assets/data/era.json", function (data) {
+			// For each worklife-box assign an event listener
+			era_boxes.map((obj, ind) => {
 				console.log(obj)
 				console.log(ind)
 				obj.person = data[ind].person
