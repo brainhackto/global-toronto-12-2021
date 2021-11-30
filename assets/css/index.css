@@ -208,3 +208,23 @@
 	color: #000000;
 	font-size: large;
 }
+
+#mri-person {
+	transition: 1s color;
+	color: #000000;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+#mri-job {
+	transition: 1s color;
+	color: #000000;
+	font-size: x-large;
+	font-style: italic;
+}
+
+#mri-bio {
+	transition: 1s color;
+	color: #000000;
+	font-size: large;
+}

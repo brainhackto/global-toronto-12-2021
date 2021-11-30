@@ -130,6 +130,14 @@
 							<td align="left">The event will be in hybrid mode including hacking sessions on Hopin and
 								few virtual and outdoor in-person socials.</th>
 						</tr>
+						<tr>
+							<td align="left">
+								<b>Note:</b>
+							</td>
+							<td align="left">Once you are registered, you should receive
+								an e-mail with further instructions. To attend the meeting, you will need to sign in on 
+								Hopin and use the link in the e-mail to book the ticket for the event.</th>
+						</tr>
 					</table>
 				</div>
 				</br>
@@ -235,9 +243,11 @@
 				<div class="row">
 					<h2>Schedule</h2>
 				</div>
-
+				<div>
+					<h4>View in <a href="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%234285F4&ctz=America%2FToronto&mode=WEEK&showTitle=1&showNav=1&showTabs=0&showCalendars=1&showPrint=1&title=BrainHack%20Global%20Toronto%202021&src=YnJhaW5oYWNrdG9yb250b0BnbWFpbC5jb20&src=MHRybmNkb2ozYWMzcnNhdm1tOXM1ODBuNmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23F09300" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no">Google Calendar</a></h4>
+				</div>
 				<div id='calendar' style="padding: 0 0 2em 0"></div>
-
+			
 				<div id = "workshop" class="row">
 					<h2>Workshops</h2>
 				</div>
@@ -287,6 +297,10 @@
 				<div id = "talk" class="row">
 					<h2>Unconference Talks</h2>
 				</div>
+				<p>
+					BrainHack Global Toronto 2021 will feature two unconference talks:
+
+				</p>
 				
 				<div class="row" style="padding: 0 0 0 0">
 					<h3><a id="talk_worklife"></a> <b>Mindfulness - from research to practice </b></h3>
@@ -331,8 +345,15 @@
 				<!-- Add flexbox div container horizontal here use placeholder-->
 				<div class="panelists">
 
-					<p>Coming soon...</p>
+					<div class="mri-box"><img class="panelist-box" src="./images/panelists/grace.jpeg"
+						alt="panelist-box"></div>
 
+				</div>
+				<!-- Goal on hover of above, call a JS script that writes into panelist-test-->
+				<div class="text-parent">
+					<div id="mri-person"></div>
+					<div id="mri-job"></div>
+					<div id="mri-bio"></div>
 				</div>
 				
 				<div class="row" style="padding: 0 0 2em 0">
@@ -758,6 +779,38 @@
 				obj.job = data[ind].job
 				obj.bio = data[ind].bio
 				obj.addEventListener("mouseover", displayCareer)
+			});
+		});
+	</script>
+
+	
+	<!-- Script for writing into divs career-text -->
+	<script>
+		// Get relevant elements
+		var mri_boxes = Array.from(document.getElementsByClassName("mri-box"))
+		// This function will write into a div
+		function displayMri(evt) {
+			var person = evt.currentTarget.person;
+			var job = evt.currentTarget.job;
+			var bio = evt.currentTarget.bio;
+			$("#mri-person").fadeOut(function (evt) {
+				$(this).text(person).fadeIn();
+			});
+			$("#mri-job").fadeOut(function (evt) {
+				$(this).text(job).fadeIn();
+			});
+			$("#mri-bio").fadeOut(function (evt) {
+				$(this).text(bio).fadeIn();
+			});
+		}
+		// Read JSON object
+		$.getJSON("assets/data/mri.json", function (data) {
+			// For each mri-box assign an event listener
+			mri_boxes.map((obj, ind) => {
+				obj.person = data[ind].person
+				obj.job = data[ind].job
+				obj.bio = data[ind].bio
+				obj.addEventListener("mouseover", displayMri)
 			});
 		});
 	</script>
