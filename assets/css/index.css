@@ -169,6 +169,14 @@
 	font-size: large
 }
 
+.text-parent-era {
+	width:100%;
+	height:15vh;
+	margin-top: 3em;
+	margin-bottom: 30vh;
+	font-size: large
+}
+
 #worklife-person {
 	transition: 1s color;
 	color: #000000;
