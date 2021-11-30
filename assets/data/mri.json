@@ -3,5 +3,10 @@
 		"person":"Grace Jacobs", 
 		"job": "PhD Candidate in Neuroscience, Universitiy of Toronto",
 	    "bio": ""
+	},
+    {
+		"person":"Nathan Chan", 
+		"job": "",
+	    "bio": ""
 	}
 ]
