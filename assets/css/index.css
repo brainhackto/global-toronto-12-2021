@@ -50,6 +50,10 @@
 	color: rgb(173, 228, 241);
   }
 
+  .bulletlist {
+	list-style-type: dics;
+   }
+
 .panelists {
 	background: rgb(255,255,255);
 	height: 100%;
